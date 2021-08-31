@@ -1,10 +1,21 @@
 //funzione che controlla se la parola è palindroma
 function controlloPalindroma(str){
-    if(str == str.split("").reverse().join("")){
+    // if(str == str.split("").reverse().join("")){
+    //     return "La parola è palindroma: " + " " + str;
+    // } else{
+    //     return "La parola non è palindroma: " + " " + str;
+    // }
+    let reverseStr = "";
+    for(let i = str.length - 1; i >= 0; i--){
+        reverseStr += str[i];
+    }
+
+    if(str == reverseStr){
         return "La parola è palindroma: " + " " + str;
     } else{
         return "La parola non è palindroma: " + " " + str;
     }
+
 }
 
 //funzione che genera numeri random da 1 a 5
@@ -33,45 +44,34 @@ let risultatoParola = controlloPalindroma(parola);
 console.log(risultatoParola); //stampa il risultato
 
 
-//PARI E DISPARI
-//chiede all'utente un numero da 1 a 5
-let numeroUtente = parseInt( prompt("Inserisci un numero da 1 a 5") );
-if(numeroUtente < 1 || numeroUtente > 5){ // se il numero è diverso sarà scelto randomicamente
-    alert("Hai scelto un numero diverso, il tuo numero ora sarà randomico");
-    numeroUtente = Random5(1,6);
-}
+// //PARI E DISPARI
+// //chiede all'utente un numero da 1 a 5
+// let scommessaUtente = prompt("Secondo te il numero che uscirà fuori e pari o dispari?");
+// if(scommessaUtente != "pari" && scommessaUtente != "dispari"){
+//     alert("La tua scelta non è ne pari e ne dispari, in automatico sarà pari");
+//     scommessaUtente = "pari";
+// }
+// console.log(scommessaUtente);
 
-//numero del computer scelto randomicamente
-let numeroComputer = Random5(1,6);
+// let numeroUtente = parseInt( prompt("Inserisci un numero da 1 a 5") );
+// if(numeroUtente < 1 || numeroUtente > 5){ // se il numero è diverso sarà scelto randomicamente
+//     alert("Hai scelto un numero diverso, il tuo numero ora sarà randomico");
+//     numeroUtente = Random5(1,6);
+// }
 
-console.log("Numero utente: " + numeroUtente);
-console.log("Numero computer: " + numeroComputer);
+// //numero del computer scelto randomicamente
+// let numeroComputer = Random5(1,6);
 
-//richiama la funziona che somma e verifica se pari e dispari
-let risultatoNumeri = sommaPariODispari(numeroUtente, numeroComputer);
-console.log(risultatoNumeri);
+// console.log("Numero utente: " + numeroUtente);
+// console.log("Numero computer: " + numeroComputer);
 
+// //richiama la funziona che somma e verifica se pari e dispari
+// let risultatoNumeri = sommaPariODispari(numeroUtente, numeroComputer);
+// console.log(risultatoNumeri);
 
-if(numeroUtente % 2 == 0){
-    numeroUtente = "pari";
-} else{
-    numeroUtente = "dispari"
-}
-
-if(numeroComputer % 2 == 0){
-    numeroUtente = "pari";
-} else{
-    numeroComputer = "dispari"
-}
-
-
-if( (numeroUtente == risultatoNumeri) && (numeroComputer != risultatoNumeri) ) {
-    alert("Complimenti hai vinto, hai scelto un numero pari")
-} else if( (numeroUtente != risultatoNumeri) && (numeroComputer == risultatoNumeri) ){
-    alert("Mi dispiace ha vinto il computer")
-} else if ( (numeroUtente != risultatoNumeri) && (numeroComputer != risultatoNumeri) ){
-    alert("Nessuno dei due giocatori ha vinto");
-} else{
-    alert("Avete scelto un numero con lo stesso multiplo, non ha vinto nessuno");
-}
+// if(scommessaUtente == risultatoNumeri){
+//     alert("Complimenti hai vinto");
+// } else{
+//     alert("Mi dispiace hai perso");
+// }
 
