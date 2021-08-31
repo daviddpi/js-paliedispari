@@ -54,8 +54,8 @@ if(scommessaUtente != "pari" && scommessaUtente != "dispari"){
 console.log(scommessaUtente);
 
 let numeroUtente = parseInt( prompt("Inserisci un numero da 1 a 5") );
-if(numeroUtente < 1 || numeroUtente > 5){ // se il numero è diverso sarà scelto randomicamente
-    alert("Hai scelto un numero diverso, il tuo numero ora sarà randomico");
+if( (numeroUtente < 1 || numeroUtente > 5) || (Number.isNaN(numeroUtente)) ){ // se il numero è diverso sarà scelto randomicamente
+    alert("Hai scelto un numero diverso o non hai scelto un numero, il tuo numero ora sarà randomico");
     numeroUtente = Random5(1,6);
 }
 
