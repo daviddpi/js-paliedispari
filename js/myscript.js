@@ -44,34 +44,34 @@ let risultatoParola = controlloPalindroma(parola);
 console.log(risultatoParola); //stampa il risultato
 
 
-// //PARI E DISPARI
-// //chiede all'utente un numero da 1 a 5
-// let scommessaUtente = prompt("Secondo te il numero che uscirà fuori e pari o dispari?");
-// if(scommessaUtente != "pari" && scommessaUtente != "dispari"){
-//     alert("La tua scelta non è ne pari e ne dispari, in automatico sarà pari");
-//     scommessaUtente = "pari";
-// }
-// console.log(scommessaUtente);
+//PARI E DISPARI
+//chiede all'utente un numero da 1 a 5
+let scommessaUtente = prompt("Secondo te il numero che uscirà fuori e pari o dispari?");
+if(scommessaUtente != "pari" && scommessaUtente != "dispari"){
+    alert("La tua scelta non è ne pari e ne dispari, in automatico sarà pari");
+    scommessaUtente = "pari";
+}
+console.log(scommessaUtente);
 
-// let numeroUtente = parseInt( prompt("Inserisci un numero da 1 a 5") );
-// if(numeroUtente < 1 || numeroUtente > 5){ // se il numero è diverso sarà scelto randomicamente
-//     alert("Hai scelto un numero diverso, il tuo numero ora sarà randomico");
-//     numeroUtente = Random5(1,6);
-// }
+let numeroUtente = parseInt( prompt("Inserisci un numero da 1 a 5") );
+if(numeroUtente < 1 || numeroUtente > 5){ // se il numero è diverso sarà scelto randomicamente
+    alert("Hai scelto un numero diverso, il tuo numero ora sarà randomico");
+    numeroUtente = Random5(1,6);
+}
 
-// //numero del computer scelto randomicamente
-// let numeroComputer = Random5(1,6);
+//numero del computer scelto randomicamente
+let numeroComputer = Random5(1,6);
 
-// console.log("Numero utente: " + numeroUtente);
-// console.log("Numero computer: " + numeroComputer);
+console.log("Numero utente: " + numeroUtente);
+console.log("Numero computer: " + numeroComputer);
 
-// //richiama la funziona che somma e verifica se pari e dispari
-// let risultatoNumeri = sommaPariODispari(numeroUtente, numeroComputer);
-// console.log(risultatoNumeri);
+//richiama la funziona che somma e verifica se pari e dispari
+let risultatoNumeri = sommaPariODispari(numeroUtente, numeroComputer);
+console.log(risultatoNumeri);
 
-// if(scommessaUtente == risultatoNumeri){
-//     alert("Complimenti hai vinto");
-// } else{
-//     alert("Mi dispiace hai perso");
-// }
+if(scommessaUtente == risultatoNumeri){
+    alert("Complimenti hai vinto");
+} else{
+    alert("Mi dispiace hai perso");
+}
 
